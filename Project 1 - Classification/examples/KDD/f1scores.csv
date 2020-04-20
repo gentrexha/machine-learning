@@ -1,0 +1,16 @@
+10 Fold Cross Validation Mean,Classifier,Description0.0,KNN,Numerical values only and features w/o missing values0.0960012912738156,Naive Bayes,Numerical values only and features w/o missing values0.05594802885125466,Decision Tree,Numerical values only and features w/o missing values0.0,Random Forest,Numerical values only and features w/o missing values0.0,KNN,Correlation-based Feature Selection0.22317520965347054,Naive Bayes,Correlation-based Feature Selection0.14262663863069544,Decision Tree,Correlation-based Feature Selection0.04531733746130031,Random Forest,Correlation-based Feature Selection0.0,KNN,Variance-based Feature Selection0.0,Naive Bayes,Variance-based Feature Selection0.04476599307184015,Decision Tree,Variance-based Feature Selection0.024338624338624344,Random Forest,Variance-based Feature Selection0.014285714285714287,KNN,Univariate Feature Selection0.086419850566856,Naive Bayes,Univariate Feature Selection0.0892357910906298,Decision Tree,Univariate Feature Selection0.0,Random Forest,Univariate Feature Selection0.04285714285714286,KNN,Tree-based Feature Selection
+0.10767094927715111,Naive Bayes,Tree-based Feature Selection
+0.04682422969187675,Decision Tree,Tree-based Feature Selection
+0.0,Random Forest,Tree-based Feature Selection
+0.04285714285714286,KNN,Tree-based Feature Selection
+0.11251318831000759,Naive Bayes,Tree-based Feature Selection
+0.08066975557298137,Decision Tree,Tree-based Feature Selection
+0.0,Random Forest,Tree-based Feature Selection
+0.0,KNN,L1-based
+0.0,Naive Bayes,L1-based
+0.05490115276879983,Decision Tree,L1-based
+0.0,Random Forest,L1-based
+0.0,KNN,Correlation-based
+0.22317520965347054,Naive Bayes,Correlation-based
+0.1263833062164058,Decision Tree,Correlation-based
+0.0,Random Forest,Correlation-based

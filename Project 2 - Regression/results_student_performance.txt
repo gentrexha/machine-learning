@@ -1,0 +1,234 @@
+********Raw data:**************************************
+
+####################### LinearRegression#######################
+Fitting 5 folds for each of 8 candidates, totalling 40 fits
+[Parallel(n_jobs=-1)]: Done  40 out of  40 | elapsed:    0.2s finished
+MAE: 3.51991449571
+MSE: 19.197508036
+R2: 0.134857682017
+RMSE: 4.38149609563
+MeAE: 2.58993130083
+LR Params: {'copy_X': True, 'normalize': True, 'fit_intercept': False}
+
+####################### SVR Regression#######################
+Fitting 5 folds for each of 25 candidates, totalling 125 fits
+[Parallel(n_jobs=-1)]: Done 125 out of 125 | elapsed:    0.4s finished
+MAE: 3.17492681729
+MSE: 18.5799559368
+R2: 0.162687880269
+RMSE: 4.31044730125
+MeAE: 2.00099784999
+SVR Params: {'C': 1.0, 'gamma': 0.03125}
+
+####################### RF Regression#######################
+MAE: 2.65416227002
+MSE: 13.3167382326
+R2: 0.399876600603
+RMSE: 3.64921063144
+MeAE: 1.94770039683
+RandomForests Regressor Params: {'max_features': 'auto', 'min_samples_split': 4, 'bootstrap': True, 'n_estimators': 200}
+
+####################### MLP Regression#######################
+Fitting 5 folds for each of 3 candidates, totalling 15 fits
+[Parallel(n_jobs=-1)]: Done  15 out of  15 | elapsed:    1.0s finished
+MAE: 2.6869255997
+MSE: 12.4019422701
+R2: 0.441102196029
+RMSE: 3.52163914536
+MeAE: 2.08258723793
+RandomForests Regressor Params: {'alpha': 0.01, 'solver': 'lbfgs', 'max_iter': 800, 'hidden_layer_sizes': 8}
+
+
+
+
+*****************After MinMax Scaling************************************
+
+
+####################### LinearRegression#######################
+Fitting 5 folds for each of 8 candidates, totalling 40 fits
+[Parallel(n_jobs=-1)]: Done  40 out of  40 | elapsed:    0.2s finished
+MAE: 3.52058105469
+MSE: 19.2014823437
+R2: 0.134678578473
+RMSE: 4.38194960533
+MeAE: 2.59521484375
+LR Params: {'copy_X': True, 'normalize': True, 'fit_intercept': False}
+
+####################### SVR Regression#######################
+Fitting 5 folds for each of 25 candidates, totalling 125 fits
+[Parallel(n_jobs=-1)]: Done 125 out of 125 | elapsed:    0.4s finished
+MAE: 3.42278929944
+MSE: 22.9722248227
+R2: -0.035251231305
+RMSE: 4.79293488613
+MeAE: 2.35015318087
+SVR Params: {'C': 1.0, 'gamma': 0.1767766952966369}
+
+####################### RF Regression#######################
+MAE: 2.68605505952
+MSE: 13.085612973
+R2: 0.41029234011
+RMSE: 3.61740417606
+MeAE: 1.92041964286
+RandomForests Regressor Params: {'max_features': 'auto', 'min_samples_split': 4, 'bootstrap': True, 'n_estimators': 200}
+
+####################### MLP Regression#######################
+Fitting 5 folds for each of 3 candidates, totalling 15 fits
+[Parallel(n_jobs=-1)]: Done   8 out of  15 | elapsed:    0.5s remaining:    0.5s
+[Parallel(n_jobs=-1)]: Done  15 out of  15 | elapsed:    1.0s finished
+MAE: 4.17025396393
+MSE: 28.927559228
+R2: -0.303630429382
+RMSE: 5.37843464476
+MeAE: 3.51850826849
+RandomForests Regressor Params: {'alpha': 0.01, 'solver': 'lbfgs', 'max_iter': 700, 'hidden_layer_sizes': 8}
+
+
+*********After Feature Selection DecisionTreeClassifier(min_samples_leaf=1, max_depth=4)***************************************
+
+irrelevant features (deleted)
+[ 0  1  2  4  6 10 11 13 14 15 16 17 18 19 20 21 22 24 25 26 27 28 29 30
+ 32 33 34 35 36 37 38 39 40 41 42 43 45 47 48 49 50 51 52 53 54 55]
+
+####################### LinearRegression#######################
+Fitting 5 folds for each of 4 candidates, totalling 20 fits
+[Parallel(n_jobs=-1)]: Done  20 out of  20 | elapsed:    0.0s finished
+MAE: 3.46242255698
+MSE: 19.8545168923
+R2: 0.105249351405
+RMSE: 4.45584076155
+MeAE: 2.69947689313
+LR Params: {'copy_X': True, 'normalize': False, 'fit_intercept': True}
+
+####################### SVR Regression#######################
+Fitting 5 folds for each of 25 candidates, totalling 125 fits
+[Parallel(n_jobs=-1)]: Done 125 out of 125 | elapsed:    0.2s finished
+MAE: 3.34201613409
+MSE: 19.7198072456
+R2: 0.111320088076
+RMSE: 4.44069895913
+MeAE: 2.62231354161
+SVR Params: {'C': 5.656854249492381, 'gamma': 0.1767766952966369}
+
+####################### RF Regression#######################
+MAE: 2.7962462007
+MSE: 15.1970411644
+R2: 0.315140100747
+RMSE: 3.8983382568
+MeAE: 1.67055330688
+RandomForests Regressor Params: {'max_features': 'auto', 'min_samples_split': 4, 'bootstrap': True, 'n_estimators': 1500}
+
+####################### MLP Regression#######################
+Fitting 5 folds for each of 3 candidates, totalling 15 fits
+[Parallel(n_jobs=-1)]: Done   8 out of  15 | elapsed:    0.4s remaining:    0.3s
+[Parallel(n_jobs=-1)]: Done  15 out of  15 | elapsed:    0.7s finished
+MAE: 3.25018706432
+MSE: 17.4552261427
+R2: 0.213374216191
+RMSE: 4.17794520581
+MeAE: 2.7332108638
+RandomForests Regressor Params: {'alpha': 0.01, 'solver': 'lbfgs', 'max_iter': 900, 'hidden_layer_sizes': 8}
+
+
+************Feature Selection with different settings)---1**************************************
+
+
+irrelevant features (deleted)
+[ 0  1  2  4  6  7 11 13 14 15 16 17 18 19 20 21 22 24 25 26 27 28 29 30
+ 32 33 34 35 36 37 39 40 41 42 43 45 46 47 48 49 50 51 52 53 54 55]
+
+####################### LinearRegression#######################
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:    0.0s finished
+MAE: 3.42440648059
+MSE: 20.6450618514
+R2: 0.0696231702854
+RMSE: 4.54368373144
+MeAE: 3.20499334982
+LR Params: {'copy_X': True, 'normalize': True, 'fit_intercept': True}
+
+####################### SVR Regression#######################
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:    0.0s finished
+MAE: 3.29711396371
+MSE: 20.4429331859
+R2: 0.0787321682784
+RMSE: 4.52138620181
+MeAE: 2.24525554857
+SVR Params: {'C': 2.0, 'gamma': 0.1767766952966369}
+
+####################### RF Regression#######################
+MAE: 2.93701210317
+MSE: 16.1713616968
+R2: 0.27123201006
+RMSE: 4.021363164
+MeAE: 1.90180555556
+RandomForests Regressor Params: {'max_features': 'auto', 'min_samples_split': 4, 'bootstrap': True, 'n_estimators': 100}
+
+####################### MLP Regression#######################
+Fitting 5 folds for each of 4 candidates, totalling 20 fits
+[Parallel(n_jobs=-1)]: Done  20 out of  20 | elapsed:    1.0s finished
+MAE: 3.52011869229
+MSE: 19.9758141006
+R2: 0.0997830508989
+RMSE: 4.46943107124
+MeAE: 2.96850879641
+RandomForests Regressor Params: {'alpha': 1.0, 'max_iter': 900, 'solver': 'lbfgs', 'hidden_layer_sizes': 8}
+
+
+************Feature Selection with different settings)---2**************************************
+
+irrelevant features (deleted)
+[ 0  1  2  4  6 11 13 14 15 16 17 18 19 20 21 22 24 25 26 27 28 29 30 31
+ 32 33 34 35 36 37 38 39 40 41 42 43 44 46 47 48 50 51 52 53 54 55]
+
+####################### LinearRegression#######################
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:    0.0s finished
+MAE: 3.48623751465
+MSE: 20.4624759923
+R2: 0.0778514649719
+RMSE: 4.52354683763
+MeAE: 2.63420547804
+LR Params: {'copy_X': True, 'normalize': False, 'fit_intercept': False}
+
+####################### SVR Regression#######################
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:    0.0s finished
+MAE: 3.45290723558
+MSE: 22.862015653
+R2: -0.0302846170816
+RMSE: 4.78142401937
+MeAE: 2.10698018315
+SVR Params: {'C'=5.656854249492381, 'gamma'=10}
+
+####################### RF Regression#######################
+MAE: 2.82592860852
+MSE: 15.266521139
+R2: 0.312008961742
+RMSE: 3.90723958044
+MeAE: 1.60462174884
+RandomForests Regressor Params: {'max_features': 'auto', 'min_samples_split': 8, 'bootstrap': True, 'n_estimators': 1500}
+
+####################### MLP Regression#######################
+Fitting 5 folds for each of 2 candidates, totalling 10 fits
+[Parallel(n_jobs=-1)]: Done  10 out of  10 | elapsed:    0.7s finished
+MAE: 3.98879410577
+MSE: 24.4854454712
+R2: -0.103445041512
+RMSE: 4.94827702045
+MeAE: 3.46056911722
+RandomForests Regressor Params: {'alpha': 1.0, 'max_iter': 900, 'solver': 'lbfgs', 'hidden_layer_sizes':16}
+
+
+******* AUTOML ********
+
+Optimization Progress:  32%|███▎      | 39/120 [00:11<00:32,  2.47pipeline/s]Generation 1 - Current best internal CV score: -14.286589497572228
+Optimization Progress:  50%|█████     | 60/120 [00:16<00:15,  3.92pipeline/s]Generation 2 - Current best internal CV score: -14.286589497572228
+Optimization Progress:  67%|██████▋   | 80/120 [01:13<00:13,  3.01pipeline/s]Generation 3 - Current best internal CV score: -14.286589497572228
+Optimization Progress:  83%|████████▎ | 100/120 [01:22<00:08,  2.48pipeline/s]Generation 4 - Current best internal CV score: -14.286589497572228
+Optimization Progress: 100%|██████████| 120/120 [01:32<00:00,  3.50pipeline/s]Generation 5 - Current best internal CV score: -14.286589497572228
+
+Best pipeline: RandomForestRegressor(input_matrix, bootstrap=True, max_features=0.7000000000000001, min_samples_leaf=5, min_samples_split=3, n_estimators=100)
+MSE: -23.969277761905722
+

@@ -1,0 +1,211 @@
+********Raw data:**************************************
+
+####################### LinearRegression#######################
+Fitting 5 folds for each of 8 candidates, totalling 40 fits
+[Parallel(n_jobs=-1)]: Done  40 out of  40 | elapsed:    1.9s finished
+MAE: 57.1033642935
+MSE: 6341.63087517
+R2: 0.270633310419
+RMSE: 79.634357379
+MeAE: 44.4248033664
+LR Params: {'copy_X': True, 'normalize': True, 'fit_intercept': False}
+
+####################### SVR Regression#######################
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:  4.1min finished
+MAE: 63.0031984303
+MSE: 8912.24328782
+R2: -0.0250191964088
+RMSE: 94.4046783153
+MeAE: 46.6216849894
+SVR Params: {'C': 5.789, 'gamma': 0.17845}
+
+####################### RF Regression#######################
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:  9.0min finished
+MAE: 21.64253774
+MSE: 1350.90898181
+R2: 0.844628608731
+RMSE: 36.7547137359
+MeAE: 13.0226666667
+RandomForestsRegressor Params: {'max_features': 'auto', 'min_samples_split': 2, 'bootstrap': True, 'n_estimators': 1500}
+
+####################### MLP Regression#######################
+MAE: 54.1991889675
+MSE: 5914.03985325
+R2: 0.319811613964
+RMSE: 76.9027948338
+MeAE: 39.9624364022
+MLPRegressor Params: {'alpha': 1.0, 'solver': 'lbfgs', 'max_iter': 800, 'hidden_layer_sizes': 8}
+
+
+
+*****************After MinMax Scaling************************************
+
+####################### LinearRegression#######################
+Fitting 5 folds for each of 8 candidates, totalling 40 fits
+[Parallel(n_jobs=-1)]: Done  40 out of  40 | elapsed:    1.8s finished
+MAE: 57.1023048325
+MSE: 6341.61241229
+R2: 0.27063543388
+RMSE: 79.6342414561
+MeAE: 44.4375
+LR Params: {'copy_X': True, 'normalize': True, 'fit_intercept': True}
+
+####################### SVR Regression#######################
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:  4.3min finished
+MAE: 51.7108291378
+MSE: 6802.0689389
+R2: 0.217677187158
+RMSE: 82.474656343
+MeAE: 31.7859777632
+SVR Params: {'C': 5.789, 'gamma': 0.17845}
+
+####################### RF Regression#######################
+Fitting 5 folds for each of 1 candidates, totalling 5 fits
+[Parallel(n_jobs=-1)]: Done   5 out of   5 | elapsed:  8.3min finished
+MAE: 21.6128067696
+MSE: 1343.69566196
+R2: 0.84545823053
+RMSE: 36.6564545744
+MeAE: 12.9513333333
+RandomForestsRegressor Params: {'max_features': 'auto', 'min_samples_split': 2, 'bootstrap': True, 'n_estimators': 1500}
+
+####################### MLP Regression#######################
+MAE: 54.4562373165
+MSE: 6055.69704402
+R2: 0.303519269247
+RMSE: 77.8183592992
+MeAE: 38.3413696512
+MLPRegressor Params: {'alpha': 0.1, 'solver': 'lbfgs', 'max_iter': 800, 'hidden_layer_sizes': 8}
+
+
+
+*********After Feature Selection DecisionTreeClassifier(min_samples_leaf=1, max_depth=4)***************************************
+
+irrelevant features (deleted)
+[ 2  6  8  9 13]
+
+####################### LinearRegression#######################
+MAE: 58.3616195811
+MSE: 6582.36098671
+R2: 0.242946343454
+RMSE: 81.1317507928
+MeAE: 45.5084947664
+LR Params: {'copy_X': True, 'normalize': True, 'fit_intercept': True}
+
+####################### SVR Regression#######################
+MAE: 45.9242431365
+MSE: 5667.63500635
+R2: 0.348151246311
+RMSE: 75.2836968164
+MeAE: 27.3858690192
+SVR Params: {'C': 5.789, 'gamma': 10}
+
+####################### RF Regression#######################
+MAE: 35.4565287733
+MSE: 3186.04116362
+R2: 0.633565506709
+RMSE: 56.4450278025
+MeAE: 21.46
+RandomForestsRegressor Params: {'max_features': 'auto', 'min_samples_split': 2, 'bootstrap': True, 'n_estimators': 200}
+
+####################### MLP Regression#######################
+MAE: 46.904651714
+MSE: 4807.57116524
+R2: 0.447069321008
+RMSE: 69.336650952
+MeAE: 31.743472759
+MLPRegressor Params: {'alpha': 0.1, 'solver': 'lbfgs', 'max_iter': 800, 'hidden_layer_sizes': 16}
+
+
+************Feature Selection with different settings)---1**************************************
+
+irrelevant features (deleted)
+[ 2  6  8  9 13]
+
+####################### LinearRegression#######################
+MAE: 58.3616195811
+MSE: 6582.36098671
+R2: 0.242946343454
+RMSE: 81.1317507928
+MeAE: 45.5084947664
+LR Params: {'copy_X': True, 'normalize': False, 'fit_intercept': True}
+
+####################### SVR Regression#######################
+MAE: 55.6645740039
+MSE: 7963.50634683
+R2: 0.0840973913521
+RMSE: 89.2384801912
+MeAE: 33.0571102703
+SVR Params: {'C': 1, 'gamma': 0.17845}
+
+####################### RF Regression#######################
+MAE: 35.4128433938
+MSE: 3192.46929054
+R2: 0.632826191895
+RMSE: 56.5019405909
+MeAE: 21.3506666667
+RandomForestsRegressor Params: {'max_features': 'auto', 'min_samples_split': 2, 'bootstrap': True, 'n_estimators': 1500}
+
+####################### MLP Regression#######################
+MAE: 47.367445838
+MSE: 4819.27415188
+R2: 0.4457233315
+RMSE: 69.4209921557
+MeAE: 33.1665422865
+MLPRegressor Params: {'alpha': 0.1, 'solver': 'lbfgs', 'max_iter': 800, 'hidden_layer_sizes': 8}
+
+
+************Feature Selection with different settings)---2**************************************
+
+irrelevant features (deleted)
+[ 2  6  8  9 13]
+
+####################### LinearRegression#######################
+MAE: 59.7534876011
+MSE: 7119.59383975
+R2: 0.18115786108
+RMSE: 84.3776856743
+MeAE: 45.6523031296
+LR Params: {'copy_X': True, 'normalize': True, 'fit_intercept': False}
+
+####################### SVR Regression#######################
+MAE: 52.8857119899
+MSE: 7080.76476675
+R2: 0.185623689034
+RMSE: 84.14728021
+MeAE: 32.75514737
+SVR Params: {'C': 5.789, 'gamma': 0.17845}
+
+####################### RF Regression#######################
+MAE: 35.7810486187
+MSE: 3217.4468543
+R2: 0.62995346036
+RMSE: 56.7225427348
+MeAE: 21.9313185426
+RandomForestsRegressor Params: {'max_features': 'auto', 'min_samples_split': 5, 'bootstrap': True, 'n_estimators': 200}
+
+####################### MLP Regression#######################
+MAE: 52.4793550555
+MSE: 5722.722765
+R2: 0.34181546661
+RMSE: 75.6486798629
+MeAE: 37.5536887763
+MLPRegressor Params: {'alpha': 0.0001, 'solver': 'lbfgs', 'max_iter': 800, 'hidden_layer_sizes': 12}
+
+
+**** AUTOML *****
+
+Optimization Progress:  33%|███▎      | 40/120 [03:22<01:48,  1.36s/pipeline]Generation 1 - Current best internal CV score: -1842.8085333951444
+Optimization Progress:  50%|█████     | 60/120 [09:21<07:40,  7.68s/pipeline]Generation 2 - Current best internal CV score: -1842.8085333951444
+Optimization Progress:  68%|██████▊   | 81/120 [19:51<17:02, 26.21s/pipeline]Generation 3 - Current best internal CV score: -1842.8085333951444
+Optimization Progress:  84%|████████▍ | 101/120 [27:13<05:34, 17.59s/pipeline]Generation 4 - Current best internal CV score: -1842.1443454789073
+Optimization Progress: 121pipeline [34:51, 20.67s/pipeline]                   Generation 5 - Current best internal CV score: -1842.1443454789073
+
+Best pipeline: KNeighborsRegressor(CombineDFs(VarianceThreshold(input_matrix, threshold=0.05), input_matrix), n_neighbors=2, p=1, weights=distance)
+C:\Projects\University\Machine Learning\ml-regression\venv\lib\site-packages\sklearn\preprocessing\_function_transformer.py:98: FutureWarning: The default validate=True will be replaced by validate=False in 0.22.
+  "validate=False in 0.22.", FutureWarning)
+MSE: -1531.0832265589115
+
